@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  tamano_de_papel: MyString
+  tipo_de_papel: MyString
+  numero_de_paginas_impresas: MyString
+  fecha: MyString
+  estado_de_impresion: MyString
+  usuario: MyString
+  numero_de_paginas_blanco_negro: MyString
+  numero_de_paginas_a_color: MyString
+  numero_de_copias_impresas: MyString
+  paginas: MyString
+
+two:
+  nombre: MyString
+  tamano_de_papel: MyString
+  tipo_de_papel: MyString
+  numero_de_paginas_impresas: MyString
+  fecha: MyString
+  estado_de_impresion: MyString
+  usuario: MyString
+  numero_de_paginas_blanco_negro: MyString
+  numero_de_paginas_a_color: MyString
+  numero_de_copias_impresas: MyString
+  paginas: MyString

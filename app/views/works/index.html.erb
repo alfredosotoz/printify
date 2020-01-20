@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Works</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Tamano de papel</th>
+      <th>Tipo de papel</th>
+      <th>Numero de paginas impresas</th>
+      <th>Fecha</th>
+      <th>Estado de impresion</th>
+      <th>Usuario</th>
+      <th>Numero de paginas blanco negro</th>
+      <th>Numero de paginas a color</th>
+      <th>Numero de copias impresas</th>
+      <th>Paginas</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @works.each do |work| %>
+      <tr>
+        <td><%= work.nombre %></td>
+        <td><%= work.tamano_de_papel %></td>
+        <td><%= work.tipo_de_papel %></td>
+        <td><%= work.numero_de_paginas_impresas %></td>
+        <td><%= work.fecha %></td>
+        <td><%= work.estado_de_impresion %></td>
+        <td><%= work.usuario %></td>
+        <td><%= work.numero_de_paginas_blanco_negro %></td>
+        <td><%= work.numero_de_paginas_a_color %></td>
+        <td><%= work.numero_de_copias_impresas %></td>
+        <td><%= work.paginas %></td>
+        <td><%= link_to 'Show', work %></td>
+        <td><%= link_to 'Edit', edit_work_path(work) %></td>
+        <td><%= link_to 'Destroy', work, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Work', new_work_path %>

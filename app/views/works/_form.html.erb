@@ -1,0 +1,72 @@
+<%= form_with(model: work, local: true) do |form| %>
+  <% if work.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(work.errors.count, "error") %> prohibited this work from being saved:</h2>
+
+      <ul>
+        <% work.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tamano_de_papel %>
+    <%= form.text_field :tamano_de_papel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_de_papel %>
+    <%= form.text_field :tipo_de_papel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero_de_paginas_impresas %>
+    <%= form.text_field :numero_de_paginas_impresas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.text_field :fecha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :estado_de_impresion %>
+    <%= form.text_field :estado_de_impresion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :usuario %>
+    <%= form.text_field :usuario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero_de_paginas_blanco_negro %>
+    <%= form.text_field :numero_de_paginas_blanco_negro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero_de_paginas_a_color %>
+    <%= form.text_field :numero_de_paginas_a_color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numero_de_copias_impresas %>
+    <%= form.text_field :numero_de_copias_impresas %>
+  </div>
+
+  <div class="field">
+    <%= form.label :paginas %>
+    <%= form.text_field :paginas %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

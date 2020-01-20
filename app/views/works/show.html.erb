@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @work.nombre %>
+</p>
+
+<p>
+  <strong>Tamano de papel:</strong>
+  <%= @work.tamano_de_papel %>
+</p>
+
+<p>
+  <strong>Tipo de papel:</strong>
+  <%= @work.tipo_de_papel %>
+</p>
+
+<p>
+  <strong>Numero de paginas impresas:</strong>
+  <%= @work.numero_de_paginas_impresas %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @work.fecha %>
+</p>
+
+<p>
+  <strong>Estado de impresion:</strong>
+  <%= @work.estado_de_impresion %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @work.usuario %>
+</p>
+
+<p>
+  <strong>Numero de paginas blanco negro:</strong>
+  <%= @work.numero_de_paginas_blanco_negro %>
+</p>
+
+<p>
+  <strong>Numero de paginas a color:</strong>
+  <%= @work.numero_de_paginas_a_color %>
+</p>
+
+<p>
+  <strong>Numero de copias impresas:</strong>
+  <%= @work.numero_de_copias_impresas %>
+</p>
+
+<p>
+  <strong>Paginas:</strong>
+  <%= @work.paginas %>
+</p>
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>
