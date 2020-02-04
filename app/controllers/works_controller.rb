@@ -62,17 +62,21 @@ class WorksController < ApplicationController
   end
 
   def new_import
+    @work = Work.new
   end
 
-  def import 
+  def import
+    @work = Work.new 
     begin
-      Work.import(params[:works][:import_file])
+      @work.import(params[:work][:import_file])
+      puts "Aqui despues de mandar a llamar import en el controlador"
       flash[:success] = "<strong> Trabajos importados!</strong>"
       redirect_to works_path
 
     rescue => exception
       flash[:error] = "Hubo un error al subir tu archivo"
-      redirect_to work_import_new_path
+      puts "EL ACZINO MATANDO"
+      redirect_to works_path
     end
   end
 
