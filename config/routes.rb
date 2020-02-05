@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :printers
   get '/works/new_import', to: 'works#new_import'
   post '/works/import', to: 'works#import'
 
