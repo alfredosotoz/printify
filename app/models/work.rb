@@ -1,5 +1,7 @@
 class Work < ApplicationRecord
 
+  belongs_to :printer
+
   # Formato de impresiones Docucolor
   LOG_FORMAT = /(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)\t(.*)/
 

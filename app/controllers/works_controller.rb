@@ -25,7 +25,6 @@ class WorksController < ApplicationController
   # POST /works.json
   def create
     @work = Work.new(work_params)
-
     respond_to do |format|
       if @work.save
         format.html { redirect_to @work, notice: 'Work was successfully created.' }
@@ -68,6 +67,7 @@ class WorksController < ApplicationController
   def import
     @work = Work.new 
     begin
+      @work.printer_id = Printer.find(1)
       @work.import(params[:work][:import_file])
       puts "Aqui despues de mandar a llamar import en el controlador"
       flash[:success] = "<strong> Trabajos importados!</strong>"
