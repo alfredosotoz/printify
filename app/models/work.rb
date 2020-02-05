@@ -1,5 +1,4 @@
 class Work < ApplicationRecord
-
   belongs_to :printer
 
   # Formato de impresiones Docucolor
@@ -60,6 +59,8 @@ class Work < ApplicationRecord
             number += 1
           when 11
             work.paginas = d
+            p = Printer.find(1)
+            work.printer_id = p.id
             work.save
           end
         end

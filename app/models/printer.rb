@@ -1,3 +1,3 @@
 class Printer < ApplicationRecord
-  has_many :works, dependent: :destroy
+  has_many :works
 end

@@ -67,7 +67,6 @@ class WorksController < ApplicationController
   def import
     @work = Work.new 
     begin
-      @work.printer_id = Printer.find(1)
       @work.import(params[:work][:import_file])
       puts "Aqui despues de mandar a llamar import en el controlador"
       flash[:success] = "<strong> Trabajos importados!</strong>"
